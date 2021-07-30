@@ -2,8 +2,8 @@
 
 [visit the website](https://juit-webkiosk.netlify.app/)
 
-![](2021-07-31-05-07-19.png)
-![](2021-07-31-05-07-47.png)
+![](login-page.png)
+![](dashboard.png)
 
 
 ## Acknowledgements
