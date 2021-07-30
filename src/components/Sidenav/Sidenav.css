@@ -1,0 +1,9 @@
+.sidenav-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 3em;
+    height: 100vh;
+    max-height: 100%;
+    background-color: #0F0F0F;
+    flex-direction: row;
+}
