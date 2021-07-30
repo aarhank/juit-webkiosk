@@ -2,7 +2,6 @@ import React from 'react'
 import './Header.css'
 import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Login from '../../container/Login/Login';
 
 function Header() {
     const user = JSON.parse(localStorage.getItem('user-info'));

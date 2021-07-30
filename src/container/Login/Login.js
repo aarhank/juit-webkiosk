@@ -21,9 +21,7 @@ function Login() {
             history.push("/dashboard")
         }
     }, [])
-    function timeout(delay: number) {
-        return new Promise( res => setTimeout(res, delay) );
-    }
+    
     function checkFetch(semesterCode){
       setLoading(true)
       if(localStorage.getItem(`faculty-${semesterCode}`))
