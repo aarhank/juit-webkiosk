@@ -141,6 +141,10 @@ function Login() {
         {
             localStorage.setItem('user-info',JSON.stringify(item));
         }
+        else{
+            setLoading(false);
+            return;
+        }
 
 
         //CGPA
