@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, history} from 'react'
 import { useHistory } from 'react-router-dom'
 import './Login.css'
 import ClipLoader from "react-spinners/CircleLoader";
@@ -21,7 +21,7 @@ function Login() {
             history.push("/dashboard")
         }
     }, [])
-    
+
     function checkFetch(semesterCode){
       setLoading(true)
       if(localStorage.getItem(`faculty-${semesterCode}`))
