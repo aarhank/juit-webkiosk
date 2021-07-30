@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
-import React, {useState, useEffect, history} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
 import './Login.css'
 import ClipLoader from "react-spinners/CircleLoader";
