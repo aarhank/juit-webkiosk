@@ -33,7 +33,6 @@ function Login() {
           check = false;
           setTimeout(() => {
             checkFetch(semesterCode);
-            console.log("hello")
           },3000);
           
       }  
@@ -49,7 +48,6 @@ function Login() {
         {
             setTimeout(() => {
                 redirect();
-                console.log("hey")
               },3000);
             
         }
@@ -67,7 +65,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         grades = await grades.json();
-        console.log(grades);
         localStorage.setItem(`grades-${semesterCode}`,JSON.stringify(grades));
     }
     async function attendance(semesterCode){
@@ -82,7 +79,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         attendances = await attendances.json();
-        console.log(attendances);
         localStorage.setItem(`attendances-${semesterCode}`,JSON.stringify(attendances));
     }
     async function moreInfo(semesterCode){
@@ -100,7 +96,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         subjects = await subjects.json();
-        console.log(subjects);
         localStorage.setItem(`subjects-${semesterCode}`,JSON.stringify(subjects));
 
         
@@ -115,7 +110,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         faculty = await faculty.json();
-        console.log(faculty);
         localStorage.setItem(`faculty-${semesterCode}`,JSON.stringify(faculty));
     
         
@@ -125,7 +119,6 @@ function Login() {
         
         //credentials
         setLoading(true);
-        console.warn("data",enrollmentNumber,password);
         let item = {enrollmentNumber,password}
         let result= await fetch('https://webkiosk-juit.herokuapp.com/api/login',{
         method:'POST',
@@ -136,7 +129,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         result = await result.json();
-        console.log(result);
         if(result.success === true)
         {
             localStorage.setItem('user-info',JSON.stringify(item));
@@ -157,7 +149,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         cgpa = await cgpa.json();
-        console.log(cgpa);
         localStorage.setItem('cgpa',JSON.stringify(cgpa));
 
 
@@ -171,7 +162,6 @@ function Login() {
         body:JSON.stringify(item)
         });
         semesters = await semesters.json();
-        console.log(semesters);
         localStorage.setItem('semesters',JSON.stringify(semesters));
 
         
