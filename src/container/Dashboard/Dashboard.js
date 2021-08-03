@@ -6,12 +6,13 @@ import AnimatedProgressProvider from "../../components/AnimatedProgressBar/Anima
 
 
 function Dashboard() {
+    const [semState2,setSemState2] = useState("2020ODDSEM");
     const [semState,setSemState] = useState("2020ODDSEM");                          // State semesters
     const user = JSON.parse(localStorage.getItem('user-info'));                     // user-credentials
     const cgpa = JSON.parse(localStorage.getItem('cgpa'));                          // CGPA
     const semester = JSON.parse(localStorage.getItem('semesters'));                 // Semesters
     const grade = JSON.parse(localStorage.getItem(`grades-${semState}`));           // Grades
-    const attendance = JSON.parse(localStorage.getItem(`attendances-${semState}`)); // Attendance
+    const attendance = JSON.parse(localStorage.getItem(`attendances-${semState2}`)); // Attendance
     const sem = semester.length;                                                         //current semester / total semesters
 
 
@@ -95,7 +96,7 @@ function Dashboard() {
                             {/**<label for="d-1-2-semester">Semester:</label>*/}
                             <select name="d-1-2semester" className='d-1-2-semester' id="d-1-2-semester" onChange={(e)=>{
                                  const selectedSemester = e.target.value;
-                                 setSemState(selectedSemester);
+                                 setSemState2(selectedSemester);
                             }}> 
                             {semester.map(post=>{
                                 return(

@@ -6,11 +6,12 @@ import AnimatedProgressProvider from "../../components/AnimatedProgressBar/Anima
 
 function MoreInfo() {
     const [semState,setSemState] = useState("2020ODDSEM");                          // State semesters
+    const [semState2,setSemState2] = useState("2020ODDSEM");
     const user = JSON.parse(localStorage.getItem('user-info'));                     // user-credentials
     const cgpa = JSON.parse(localStorage.getItem('cgpa'));                          // CGPA
     const semester = JSON.parse(localStorage.getItem('semesters'));                 // Semesters
     const subjects = JSON.parse(localStorage.getItem(`subjects-${semState}`));      // Subjects
-    const faculty = JSON.parse(localStorage.getItem(`faculty-${semState}`));        // Faculty
+    const faculty = JSON.parse(localStorage.getItem(`faculty-${semState2}`));        // Faculty
     const sem = cgpa.length                                                         //current semester / total semesters
 
     //Function to convert to lower case exect the first letter
@@ -98,7 +99,7 @@ function MoreInfo() {
                             {/**<label for="d-1-2-semester">Semester:</label>*/}
                             <select name="d-1-2semester" className='d-1-2-semester' id="d-1-2-semester" onChange={(e)=>{
                                  const selectedSemester = e.target.value;
-                                 setSemState(selectedSemester);
+                                 setSemState2(selectedSemester);
                             }}> 
                             {semester.map(post=>{
                                 return(
