@@ -36,7 +36,7 @@ function Dashboard() {
                     <div className="d-container-1-1">
                         <div className='d-1-1-text'>
                             <p><span className='d-student' >Student</span><br/><span className='d-enroll' >{user.enrollmentNumber}</span><br/><span className="d-student">{sem}nd semester</span></p>
-                            <p><span  className='d-cgpa'>{cgpa[sem-1].cgpa}</span>  <span  className='d-cgpa-text'>cgpa</span></p>
+                            <p><span  className='d-cgpa'>{cgpa[sem-2].cgpa}</span>  <span  className='d-cgpa-text'>cgpa</span></p>
                         </div>
                     </div>
                     <div className="d-container-1-2">
